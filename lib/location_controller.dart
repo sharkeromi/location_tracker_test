@@ -24,7 +24,7 @@ class LocationController extends GetxController {
             debug: true,
             logLevel: bg.Config.LOG_LEVEL_VERBOSE,
             enableHeadless: true,
-            notification: bg.Notification(title: "Your location", text: 'Tap to see')))
+            notification: bg.Notification(title: "Your location", text: 'Tap to see',sticky: true)))
         .then((bg.State state) {
       if (!state.enabled) {
         bg.BackgroundGeolocation.start();
